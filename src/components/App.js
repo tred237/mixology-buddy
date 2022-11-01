@@ -5,11 +5,17 @@ import AddCocktail from './AddCocktail'
 
 function App() {
   const [cocktailData, setCocktailData] = useState([])
+  const [ingredients, setIngredients] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:3000/cocktails')
     .then(res => res.json())
-    .then(data => setCocktailData(data))
+    .then(data => {
+      setCocktailData(data)
+
+      const ingredientKeys = Object.keys(data[0]).filter(key => key.includes('strIngredient'))
+      setIngredients(ingredientKeys)
+    })
   },[])
 
   function handleCocktailDelete(id){
@@ -21,7 +27,7 @@ function App() {
     <div>
       <h1>Mixology Buddy</h1>
       <NavBar />
-      <AddCocktail cocktails={cocktailData} />
+      <AddCocktail cocktails={cocktailData} ingredients={ingredients} />
       <CocktailList cocktails={cocktailData} onCocktailDelete={handleCocktailDelete}/>
     </div>
   )
