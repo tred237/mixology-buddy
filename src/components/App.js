@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react'
+import CocktailList from './CocktailList'
+import NavBar from './NavBar'
+import AddCocktail from './AddCocktail'
 
 function App() {
   const [cocktailData, setCocktailData] = useState([])
@@ -14,6 +17,9 @@ function App() {
   return (
     <div>
       <h1>Mixology Buddy</h1>
+      <NavBar />
+      <AddCocktail />
+      <CocktailList />
     </div>
   )
 }
