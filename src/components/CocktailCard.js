@@ -20,7 +20,7 @@ function CocktailCard({ cocktail, onCocktailDelete }){
                 <Card.Img variant="top" src={cocktail.strDrinkThumb} alt="this image" />
                 <Card.Body>
                     <Card.Text>{cocktail.strDrink}</Card.Text>
-                    <Button>Details</Button> <Button onClick={handleDeleteClick} value="Delete">Delete</Button>
+                    <Button variant='dark'>Details</Button> <Button variant='dark' onClick={handleDeleteClick} value="Delete">Delete</Button>
                 </Card.Body>
             </Card>
     )
