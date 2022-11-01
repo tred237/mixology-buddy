@@ -1,6 +1,11 @@
-.card {
+.card-container {
   border-style: solid;
   width: 20%;
   text-align: center;
   padding: 1%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }

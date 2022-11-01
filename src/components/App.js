@@ -19,7 +19,7 @@ function App() {
       <h1>Mixology Buddy</h1>
       <NavBar />
       <AddCocktail />
-      <CocktailList />
+      <CocktailList cocktails={cocktailData}/>
     </div>
   )
 }

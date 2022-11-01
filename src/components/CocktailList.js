@@ -1,10 +1,10 @@
 import CocktailCard from './CocktailCard'
 
-function CocktailList() {
+function CocktailList({ cocktails }) {
     return(
         <div>
             <h2>Cocktail List</h2>
-            <CocktailCard />
+            {cocktails.map(cocktail => <CocktailCard key={cocktail.id} cocktail={cocktail} />)}
         </div>
     )
 }
