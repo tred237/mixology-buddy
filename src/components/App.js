@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react'
 
 function App() {
-  const [test, useTest] = useState([])
+  const [cocktailData, setCocktailData] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:3000/cocktails')
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => setCocktailData(data))
   },[])
+
+  console.log(cocktailData[0])
 
   return (
     <div>
