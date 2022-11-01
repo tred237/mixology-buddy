@@ -12,14 +12,17 @@ function App() {
     .then(data => setCocktailData(data))
   },[])
 
-  console.log(cocktailData[0])
+  function handleCocktailDelete(id){
+    const newCocktailList = cocktailData.filter(element => element.id !== id)
+    setCocktailData(newCocktailList)
+  }
 
   return (
     <div>
       <h1>Mixology Buddy</h1>
       <NavBar />
       <AddCocktail />
-      <CocktailList cocktails={cocktailData}/>
+      <CocktailList cocktails={cocktailData} onCocktailDelete={handleCocktailDelete}/>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-.card-container {
+.card {
   border-style: solid;
   width: 20%;
   text-align: center;
@@ -8,4 +8,8 @@
 img {
   width: 100%;
   height: 100%;
+}
+
+.card-container {
+  padding-bottom: 10%;
 }

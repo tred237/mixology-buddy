@@ -1,18 +1,28 @@
-import { Card, Button } from 'react-bootstrap'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
-function CocktailCard({ cocktail }){
+
+function CocktailCard({ cocktail, onCocktailDelete }){
+    function handleDeleteClick(e){
+        fetch(`http://localhost:3000/cocktails/${cocktail.id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(cocktail)
+        })
+        .then(res => res.json())
+        .then(() => onCocktailDelete(cocktail.id))
+    }
+
     return(
-        <div className='card-container'>
             <Card>
                 <Card.Img variant="top" src={cocktail.strDrinkThumb} alt="this image" />
                 <Card.Body>
-                    <Card.Text>
-                        {cocktail.strDrink}
-                    </Card.Text>
-                    <Button variant="light">Details</Button> <Button variant="light">Delete</Button>
+                    <Card.Text>{cocktail.strDrink}</Card.Text>
+                    <Button>Details</Button> <Button onClick={handleDeleteClick} value="Delete">Delete</Button>
                 </Card.Body>
             </Card>
-        </div>
     )
 }
 
