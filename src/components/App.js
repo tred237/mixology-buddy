@@ -21,7 +21,7 @@ function App() {
     <div>
       <h1>Mixology Buddy</h1>
       <NavBar />
-      <AddCocktail />
+      <AddCocktail cocktails={cocktailData} />
       <CocktailList cocktails={cocktailData} onCocktailDelete={handleCocktailDelete}/>
     </div>
   )
