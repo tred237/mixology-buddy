@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Ingredients from './Ingredients';
 import { useState } from 'react'
 
-function AddCocktail({ ingredients }){
+function AddCocktail({ ingredients, onCocktailSubmit }){
     const [formData, setFormData] = useState({
         name: '',
         imgThumbnail: '',
@@ -43,14 +43,29 @@ function AddCocktail({ ingredients }){
         measurement15: ''
     })
 
+    const emptyFormDataObj = {...formData}
+
     function handleChange(e){
         setFormData({...formData, [e.target.name]: e.target.value})
     }
 
-    console.log(formData)
+    function handleSubmitClick(e){
+        e.preventDefault()
+        const newCocktail = {...formData}
+        
+        fetch('http://localhost:3000/cocktails', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newCocktail)
+        })
+        .then(res => res.json())
+        .then(data => onCocktailSubmit(data))
+    }
 
     return(
-        <Form>
+        <Form onSubmit={handleSubmitClick}>
             <Form.Group className="mb-3">
                 <Button variant="dark" type="submit">Submit</Button>
             </Form.Group>

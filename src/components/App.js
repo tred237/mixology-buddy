@@ -23,11 +23,15 @@ function App() {
     setCocktailData(newCocktailList)
   }
 
+  function handleCocktailSubmit(cocktail){
+    setCocktailData([...cocktailData, cocktail])
+  }
+
   return (
     <div>
       <h1>Mixology Buddy</h1>
       <NavBar />
-      <AddCocktail cocktails={cocktailData} ingredients={ingredients} />
+      <AddCocktail cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
       <CocktailList cocktails={cocktailData} onCocktailDelete={handleCocktailDelete}/>
     </div>
   )
