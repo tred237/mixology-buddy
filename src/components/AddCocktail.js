@@ -81,7 +81,7 @@ function AddCocktail({ ingredients }){
                 <Form.Label>Cocktail Instructions</Form.Label>
                 <Form.Control type="text" placeholder="Enter cocktail instructions" name="instructions" value={formData.instructions} onChange={handleChange} />
             </Form.Group>
-            {ingredients.map(ingredient => <Ingredients key={ingredient} ingredient={ingredient}/>)}
+            {ingredients.map(ingredient => <Ingredients key={ingredient} ingredient={ingredient} formData={formData} handleChange={handleChange}/>)}
         </Form>
     )
 }
