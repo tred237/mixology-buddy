@@ -3,17 +3,33 @@ import Form from 'react-bootstrap/Form';
 import Ingredients from './Ingredients';
 
 function AddCocktail({ ingredients }){
-    const ingredientsArr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-
     return(
         <Form>
+            <Form.Group className="mb-3">
+                <Button variant="dark" type="submit">Submit</Button>
+            </Form.Group>
             <Form.Group className="mb-3">
                 <Form.Label>Cocktail Name</Form.Label>
                 <Form.Control type="text" placeholder="Enter cocktail name" />
             </Form.Group>
             <Form.Group className="mb-3">
-                <Form.Label>Cocktail Image</Form.Label>
+                <Form.Label>Cocktail Thumbnail</Form.Label>
+                <Form.Control type="text" placeholder="Enter cocktail image thumbnail" />
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Cocktail Image Source</Form.Label>
+                <Form.Control type="text" placeholder="Enter cocktail image source" />
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Cocktail Image Credit</Form.Label>
                 <Form.Control type="text" placeholder="Enter cocktail image URL" />
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Cocktail Image Creative Commons Confirmed</Form.Label>
+                <Form.Select>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </Form.Select>
             </Form.Group>
             <Form.Group className="mb-3">
                 <Form.Label>Cocktail Instructions</Form.Label>
