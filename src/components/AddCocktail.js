@@ -105,22 +105,24 @@ function AddCocktail({ ingredients, onCocktailSubmit }){
         })
     }
 
+
+
     return(
         <Form onSubmit={handleSubmitClick}>
             <Form.Group className="mb-3">
                 <Button variant="dark" type="submit">Submit</Button>
             </Form.Group>
             <Form.Group className="mb-3">
-                <Form.Label>Cocktail Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter cocktail name" name="name" value={formData.name} onChange={handleChange} />
+                <Form.Label>Cocktail Name *</Form.Label>
+                <Form.Control required type="text" placeholder="Enter cocktail name" name="name" value={formData.name} onChange={handleChange} />
             </Form.Group>
             <Form.Group className="mb-3">
-                <Form.Label>Cocktail Thumbnail</Form.Label>
-                <Form.Control type="text" placeholder="Enter cocktail image thumbnail" name="imgThumbnail" value={formData.imgThumbnail} onChange={handleChange} />
+                <Form.Label>Cocktail Thumbnail *</Form.Label>
+                <Form.Control required type="text" placeholder="Enter cocktail image thumbnail" name="imgThumbnail" value={formData.imgThumbnail} onChange={handleChange} />
             </Form.Group>
             <Form.Group className="mb-3">
-                <Form.Label>Cocktail Image Source</Form.Label>
-                <Form.Control type="text" placeholder="Enter cocktail image source" name="imgSource" value={formData.imgSource} onChange={handleChange} />
+                <Form.Label>Cocktail Image Source *</Form.Label>
+                <Form.Control required type="text" placeholder="Enter cocktail image source" name="imgSource" value={formData.imgSource} onChange={handleChange} />
             </Form.Group>
             <Form.Group className="mb-3">
                 <Form.Label>Cocktail Image Credit</Form.Label>
@@ -134,8 +136,8 @@ function AddCocktail({ ingredients, onCocktailSubmit }){
                 </Form.Select>
             </Form.Group>
             <Form.Group className="mb-3">
-                <Form.Label>Cocktail Instructions</Form.Label>
-                <Form.Control type="text" placeholder="Enter cocktail instructions" name="instructions" value={formData.instructions} onChange={handleChange} />
+                <Form.Label>Cocktail Instructions *</Form.Label>
+                <Form.Control required type="text" placeholder="Enter cocktail instructions" name="instructions" value={formData.instructions} onChange={handleChange} />
             </Form.Group>
             {ingredients.map(ingredient => <Ingredients key={ingredient} ingredient={ingredient} formData={formData} handleChange={handleChange}/>)}
         </Form>

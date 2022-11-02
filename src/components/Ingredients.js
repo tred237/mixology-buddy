@@ -9,16 +9,18 @@ function Ingredients({ ingredient, formData, handleChange }) {
         <Form.Group className="mb-3" as={Col}>
             <Row>
                 <Col>
-                    <Form.Label>Ingedient</Form.Label>
-                    <Form.Control type="text" 
+                    <Form.Label>{splitIngredient === '1' ? 'Ingedient *' : 'Ingedient'}</Form.Label>
+                    <Form.Control required={splitIngredient === '1' ? true : false} 
+                                  type="text" 
                                   placeholder="Enter ingredient" 
                                   name={`ingredient${splitIngredient}`} 
                                   value={formData[`ingredient${splitIngredient}`]} 
                                   onChange={handleChange} />
                 </Col>
                 <Col>
-                    <Form.Label>Measurement</Form.Label>
-                    <Form.Control type="text" 
+                    <Form.Label>{splitIngredient === '1' ? 'Measurement *' : 'Measurement'}</Form.Label>
+                    <Form.Control required={splitIngredient === '1' ? true : false} 
+                                  type="text" 
                                   placeholder="Enter measurement" 
                                   name={`measurement${splitIngredient}`} 
                                   value={formData[`measurement${splitIngredient}`]} 
