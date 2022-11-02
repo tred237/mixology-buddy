@@ -43,8 +43,6 @@ function AddCocktail({ ingredients, onCocktailSubmit }){
         measurement15: ''
     })
 
-    const emptyFormDataObj = {...formData}
-
     function handleChange(e){
         setFormData({...formData, [e.target.name]: e.target.value})
     }
@@ -62,6 +60,49 @@ function AddCocktail({ ingredients, onCocktailSubmit }){
         })
         .then(res => res.json())
         .then(data => onCocktailSubmit(data))
+
+        clearForm()
+    }
+
+    function clearForm(){
+        setFormData({
+            name: '',
+            imgThumbnail: '',
+            imgSource: '',
+            imgCredit: '',
+            imgCreativeCommons: 'No',
+            instructions: '',
+            ingredient1: '',
+            measurement1: '',
+            ingredient2: '',
+            measurement2: '',
+            ingredient3: '',
+            measurement3: '',
+            ingredient4: '',
+            measurement4: '',
+            ingredient5: '',
+            measurement5: '',
+            ingredient6: '',
+            measurement6: '',
+            ingredient7: '',
+            measurement7: '',
+            ingredient8: '',
+            measurement8: '',
+            ingredient9: '',
+            measurement9: '',
+            ingredient10: '',
+            measurement10: '',
+            ingredient11: '',
+            measurement11: '',
+            ingredient12: '',
+            measurement12: '',
+            ingredient13: '',
+            measurement13: '',
+            ingredient14: '',
+            measurement14: '',
+            ingredient15: '',
+            measurement15: ''
+        })
     }
 
     return(
