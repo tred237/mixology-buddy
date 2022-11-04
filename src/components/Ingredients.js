@@ -16,7 +16,6 @@ function Ingredients({ ingredient, formData, validated, handleChange }) {
                                   name={`ingredient${splitIngredient}`} 
                                   value={formData[`ingredient${splitIngredient}`]} 
                                   onChange={handleChange} />
-                    <Form.Control.Feedback type="invalid">Please enter an ingredient.</Form.Control.Feedback>
                 </Col>
                 <Col>
                     <Form.Label>{splitIngredient === '1' ? 'Measurement *' : 'Measurement'}</Form.Label>
@@ -26,7 +25,6 @@ function Ingredients({ ingredient, formData, validated, handleChange }) {
                                   name={`measurement${splitIngredient}`} 
                                   value={formData[`measurement${splitIngredient}`]} 
                                   onChange={handleChange} />
-                    <Form.Control.Feedback type="invalid">Please enter a measurement for the cocktail ingredient.</Form.Control.Feedback>
                 </Col>
             </Row>
         </Form.Group>
