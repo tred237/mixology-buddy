@@ -2,7 +2,7 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-function Ingredients({ ingredient, formData, validated, handleChange }) {
+function Ingredients({ ingredient, formData, handleChange }) {
     const splitIngredient = ingredient.split('strIngredient')[1]
     
     return(
@@ -13,8 +13,8 @@ function Ingredients({ ingredient, formData, validated, handleChange }) {
                     <Form.Control required={splitIngredient === '1' ? true : false} 
                                   type="text" 
                                   placeholder="Enter ingredient" 
-                                  name={`ingredient${splitIngredient}`} 
-                                  value={formData[`ingredient${splitIngredient}`]} 
+                                  name={ingredient} 
+                                  value={formData[ingredient]} 
                                   onChange={handleChange} />
                 </Col>
                 <Col>
@@ -22,8 +22,8 @@ function Ingredients({ ingredient, formData, validated, handleChange }) {
                     <Form.Control required={splitIngredient === '1' ? true : false} 
                                   type="text" 
                                   placeholder="Enter measurement" 
-                                  name={`measurement${splitIngredient}`} 
-                                  value={formData[`measurement${splitIngredient}`]} 
+                                  name={`strMeasure${splitIngredient}`} 
+                                  value={formData[`strMeasure${splitIngredient}`]} 
                                   onChange={handleChange} />
                 </Col>
             </Row>

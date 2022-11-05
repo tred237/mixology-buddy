@@ -19,13 +19,13 @@ function CocktailCard({ cocktail, onCocktailDelete }){
     }
 
     return(
-            <Card>
-                <Card.Img variant="top" src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
-                <Card.Body>
-                    <Card.Text>{cocktail.strDrink}</Card.Text>
-                    <Button variant='dark' onClick={() => history.push(`/details/${cocktail.id}`)}>Details</Button> <Button variant='dark' onClick={handleDeleteClick} value="Delete">Delete</Button>
-                </Card.Body>
-            </Card>
+        <Card>
+            <Card.Img variant="top" src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
+            <Card.Body>
+                <Card.Text>{cocktail.strDrink}</Card.Text>
+                <Button variant='dark' onClick={() => history.push(`/details/${cocktail.id}`)}>Details</Button> <Button variant='dark' onClick={handleDeleteClick} value="Delete">Delete</Button>
+            </Card.Body>
+        </Card>
     )
 }
 
