@@ -38,7 +38,7 @@ function App() {
         <Route path="/addCocktail">
           <AddCocktail cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
         </Route>
-        <Route path="/details">
+        <Route path="/details/:drinkId">
           <CocktailDetails ingredientKeys={ingredients} />
         </Route>
         <Route path="/">
