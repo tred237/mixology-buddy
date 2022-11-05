@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
-import { Route, Routes, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 import CocktailList from './CocktailList'
 import NavBar from './NavBar'
 import AddCocktail from './AddCocktail'
+import CocktailDetails from './CocktailDetails'
 
 function App() {
   const [cocktailData, setCocktailData] = useState([])
@@ -36,6 +37,9 @@ function App() {
       <Switch>
         <Route path="/addCocktail">
           <AddCocktail cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
+        </Route>
+        <Route path="/details">
+          <CocktailDetails />
         </Route>
         <Route path="/">
           <CocktailList cocktails={cocktailData} onCocktailDelete={handleCocktailDelete}/>
