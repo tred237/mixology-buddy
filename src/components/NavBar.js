@@ -1,7 +1,15 @@
+import { NavLink } from 'react-router-dom'
+
 function NavBar(){
     return(
         <div>
-            <p>NavBar</p>
+            <NavLink to="/" activeClassName="selected">
+                Home
+            </NavLink> 
+            <br/>
+            <NavLink to="/addCocktail" activeClassName="selected">
+                Add A Cocktail
+            </NavLink>
         </div>
     )
 }
