@@ -13,3 +13,7 @@ img {
 .card-container {
   padding-bottom: 10%;
 }
+
+#cocktail-details-container {
+  width: 50%
+}
