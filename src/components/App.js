@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { Route, Routes, Switch } from 'react-router-dom'
+
 import CocktailList from './CocktailList'
 import NavBar from './NavBar'
 import AddCocktail from './AddCocktail'
@@ -31,8 +33,14 @@ function App() {
     <div>
       <h1>Mixology Buddy</h1>
       <NavBar />
-      <AddCocktail cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
-      <CocktailList cocktails={cocktailData} onCocktailDelete={handleCocktailDelete}/>
+      <Switch>
+        <Route path="/addCocktail">
+          <AddCocktail cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
+        </Route>
+        <Route path="/">
+          <CocktailList cocktails={cocktailData} onCocktailDelete={handleCocktailDelete}/>
+        </Route>
+      </Switch>
     </div>
   )
 }
