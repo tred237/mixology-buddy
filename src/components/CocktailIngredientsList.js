@@ -1,6 +1,6 @@
-function CocktailIngredientsList(){
+function CocktailIngredientsList({ ingredient, measurement }){
     return(
-        <li></li>
+        <li>{`${ingredient}, ${measurement}`}</li>
     )
 }
 

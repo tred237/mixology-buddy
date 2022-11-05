@@ -39,7 +39,7 @@ function App() {
           <AddCocktail cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
         </Route>
         <Route path="/details">
-          <CocktailDetails />
+          <CocktailDetails ingredientKeys={ingredients} />
         </Route>
         <Route path="/">
           <CocktailList cocktails={cocktailData} onCocktailDelete={handleCocktailDelete}/>
