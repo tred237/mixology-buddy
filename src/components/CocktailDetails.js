@@ -14,7 +14,6 @@ function CocktailDetails({ ingredientKeys }){
         .then(data => {
             setCocktail(data)
             setAttribution([data.strImageSource, data.strImageAttribution, `Creative Commons Confirmed: ${data.strCreativeCommonsConfirmed}`].filter(element => element))
-
         })
     },[drinkId])
 
@@ -31,7 +30,7 @@ function CocktailDetails({ ingredientKeys }){
                     if(cocktail[ingredientKey]) return <CocktailIngredientsList key={ingredientKey} 
                                                                                 ingredient={cocktail[ingredientKey]} 
                                                                                 measurement={cocktail[`strMeasure${ingredientKey.split('strIngredient')[1]}`]} />
-
+                    return true
                 })}
             </ul>
         </div>
