@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 
 import CocktailList from './CocktailList'
 import NavBar from './NavBar'
-import AddCocktail from './AddCocktail'
+import NewCocktailForm from './NewCocktailForm'
 import CocktailDetails from './CocktailDetails'
 
 function App() {
@@ -35,8 +35,8 @@ function App() {
       <h1>Mixology Buddy</h1>
       <NavBar />
       <Switch>
-        <Route path="/addCocktail">
-          <AddCocktail cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
+        <Route path="/add-a-cocktail">
+          <NewCocktailForm cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
         </Route>
         <Route path="/details/:drinkId">
           <CocktailDetails ingredientKeys={ingredients} />

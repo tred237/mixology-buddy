@@ -7,7 +7,7 @@ function NavBar(){
                 Home
             </NavLink> 
             <br/>
-            <NavLink to="/addCocktail" activeClassName="selected">
+            <NavLink to="/add-a-cocktail" activeClassName="selected">
                 Add A Cocktail
             </NavLink>
         </div>
