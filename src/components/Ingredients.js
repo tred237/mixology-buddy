@@ -6,7 +6,7 @@ function Ingredients({ ingredient, formData, handleChange }) {
     const splitIngredient = ingredient.split('strIngredient')[1]
     
     return(
-        <Form.Group className="mb-3" as={Col}>
+        <Form.Group className="mb-4">
             <Row>
                 <Col>
                     <Form.Label>{splitIngredient === '1' ? 'Ingedient *' : 'Ingedient'}</Form.Label>

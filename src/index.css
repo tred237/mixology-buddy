@@ -1,12 +1,13 @@
 #body {
   background-color: black;
   color: white;
+  margin-top: 3%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 #card-list-container {
   margin-top: 5%;
-  margin-left: 15%;
-  margin-right: 15%;
 }
 
 .card {
@@ -25,4 +26,8 @@
 
 #cocktail-details-container {
   width: 50%
+}
+
+.form {
+  margin-top: 5%;
 }

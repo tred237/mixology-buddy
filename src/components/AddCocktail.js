@@ -1,7 +1,10 @@
+import { useState } from 'react'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Ingredients from './Ingredients';
-import { useState } from 'react'
 
 function AddCocktail({ ingredients, onCocktailSubmit }){
     const formDataDefault = {
@@ -66,38 +69,49 @@ function AddCocktail({ ingredients, onCocktailSubmit }){
     }
 
     return(
-        <Form onSubmit={handleSubmitClick}>
-            <Form.Group className="mb-3">
+        <Form className="form" onSubmit={handleSubmitClick} >
+            <Form.Group className="mb-4">
                 <Button variant="dark" type="submit">Submit</Button>
             </Form.Group>
-            <Form.Group className="mb-3">
-                <Form.Label>Cocktail Name *</Form.Label>
-                <Form.Control required type="text" placeholder="Enter cocktail name" name="strDrink" value={formData.strDrink} onChange={handleChange} />
+            <Form.Group className="mb-4">
+                <Row md={3}>
+                    <Col>
+                        <Form.Label>Cocktail Name *</Form.Label>
+                        <Form.Control required type="text" placeholder="Enter name" name="strDrink" value={formData.strDrink} onChange={handleChange} />
+                    </Col>
+                    <Col>
+                        <Form.Label>Cocktail Thumbnail *</Form.Label>
+                        <Form.Control required type="text" placeholder="Enter image thumbnail" name="strDrinkThumb" value={formData.strDrinkThumb} onChange={handleChange} />
+                    </Col>
+                    <Col>
+                        <Form.Label>Cocktail Image Source *</Form.Label>
+                        <Form.Control required type="text" placeholder="Enter image source" name="strImageSource" value={formData.strImageSource} onChange={handleChange} />
+                    </Col>
+                </Row>
             </Form.Group>
-            <Form.Group className="mb-3">
-                <Form.Label>Cocktail Thumbnail *</Form.Label>
-                <Form.Control required type="text" placeholder="Enter cocktail image thumbnail" name="strDrinkThumb" value={formData.strDrinkThumb} onChange={handleChange} />
-            </Form.Group>
-            <Form.Group className="mb-3">
-                <Form.Label>Cocktail Image Source *</Form.Label>
-                <Form.Control required type="text" placeholder="Enter cocktail image source" name="strImageSource" value={formData.strImageSource} onChange={handleChange} />
-            </Form.Group>
-            <Form.Group className="mb-3">
-                <Form.Label>Cocktail Image Credit</Form.Label>
-                <Form.Control type="text" placeholder="Enter cocktail image URL" name="strImageAttribution" value={formData.strImageAttribution} onChange={handleChange} />
-            </Form.Group>
-            <Form.Group className="mb-3">
-                <Form.Label>Cocktail Image Creative Commons Confirmed</Form.Label>
-                <Form.Select name="strCreativeCommonsConfirmed" onChange={handleChange}>
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                </Form.Select>
-            </Form.Group>
-            <Form.Group className="mb-3">
-                <Form.Label>Cocktail Instructions *</Form.Label>
-                <Form.Control required type="text" placeholder="Enter cocktail instructions" name="strInstructions" value={formData.strInstructions} onChange={handleChange} />
+            <Form.Group className="mb-4">
+                <Row md={3}>
+                    <Col>
+                        <Form.Label>Cocktail Image Credit</Form.Label>
+                        <Form.Control type="text" placeholder="Enter image URL" name="strImageAttribution" value={formData.strImageAttribution} onChange={handleChange} />
+                    </Col>
+                    <Col>
+                        <Form.Label>Image Creative Commons Confirmed</Form.Label>
+                        <Form.Select name="strCreativeCommonsConfirmed" onChange={handleChange}>
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </Form.Select>
+                    </Col>
+                    <Col>
+                        <Form.Label>Cocktail Instructions *</Form.Label>
+                        <Form.Control required type="text" placeholder="Enter instructions" name="strInstructions" value={formData.strInstructions} onChange={handleChange} />
+                    </Col>
+                </Row>
             </Form.Group>
             {ingredients.map(ingredient => <Ingredients key={ingredient} ingredient={ingredient} formData={formData} handleChange={handleChange}/>)}
+            <Form.Group className="mb-4">
+                <Button variant="dark" type="submit">Submit</Button>
+            </Form.Group>
         </Form>
     )
 }

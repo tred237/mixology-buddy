@@ -9,8 +9,8 @@ function CocktailList({ cocktails, onCocktailDelete }) {
             <h2>Cocktail List</h2>
             <Row md={3}>
                 {cocktails.map(cocktail => {
-                   return( <Col className='col'>
-                            <CocktailCard key={cocktail.id} cocktail={cocktail} onCocktailDelete={onCocktailDelete} />
+                   return( <Col key={cocktail.id}>
+                            <CocktailCard cocktail={cocktail} onCocktailDelete={onCocktailDelete} />
                            </Col>)
                 })}
             </Row>
