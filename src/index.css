@@ -4,7 +4,9 @@
 }
 
 #card-list-container {
-  margin: 5%;
+  margin-top: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .card {
@@ -12,9 +14,13 @@
   text-align: center;
   padding: 3%;
   color: black;
-  /* margin: 3%; */
+  margin: 3%;
   margin-top: 12px;
   margin-bottom: 12px;
+}
+
+.card-img-top {
+  height: 16rem;
 }
 
 #cocktail-details-container {
