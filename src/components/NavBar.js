@@ -22,7 +22,7 @@ import Navbar from 'react-bootstrap/Navbar'
 
 function NavBar(){
     return(
-        <Navbar variant="dark"  expand="lg">
+        <Navbar variant="dark" expand="lg">
         <Container>
           <Navbar.Brand id="nav-brand">Mixology Buddy</Navbar.Brand>
           <Navbar.Toggle />

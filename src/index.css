@@ -6,7 +6,7 @@
   margin-right: 10%;
 }
 
-.form, #card-list-container {
+.form, #card-list-container, #cocktail-details-container {
   margin-top: 5%;
   margin-left: 5%;
   margin-right: 5%;
@@ -27,10 +27,21 @@
   height: 16rem;
 }
 
-#cocktail-details-container {
-  width: 50%
-}
-
 #nav-brand {
   font-size: x-large
+}
+
+.details {
+  max-width: 400px;
+}
+
+#details-img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+#details-attribution {
+  font-style: italic;
+  overflow-wrap: break-word;
+  font-size: x-small;
 }
