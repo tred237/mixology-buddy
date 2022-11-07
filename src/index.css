@@ -45,3 +45,8 @@
   overflow-wrap: break-word;
   font-size: x-small;
 }
+
+#delete-message {
+  color:red;
+  font-style: italic;
+}

@@ -54,7 +54,7 @@ function App() {
           <NewCocktailForm cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
         </Route>
         <Route path="/details/:drinkId">
-          <CocktailDetails ingredientKeys={ingredients} />
+          <CocktailDetails ingredientKeys={ingredients} onCocktailDelete={handleDeleteClick} />
         </Route>
         <Route path="/">
           <CocktailList cocktails={cocktailData} onCocktailDelete={handleDeleteClick}/>

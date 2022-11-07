@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 import CocktailIngredientsList from "./CocktailIngredientsList";
+import { Button } from 'react-bootstrap'
 
-function CocktailDetails({ ingredientKeys }){
+function CocktailDetails({ ingredientKeys, onCocktailDelete }){
     const [cocktail, setCocktail] = useState([])
     const [attribution, setAttribution] = useState([])
+    const [deleted, setDeleted] = useState(false)
     const {drinkId} = useParams()
 
     useEffect(() => {
@@ -21,6 +24,11 @@ function CocktailDetails({ ingredientKeys }){
 
     const formatAttribution = attribution.join(", ")
 
+    function handleDeletedCocktail(){
+        onCocktailDelete(cocktail)
+        setDeleted(!deleted)
+    }
+
     return(
         <div id="cocktail-details-container">
             <Row md={2}>
@@ -28,6 +36,7 @@ function CocktailDetails({ ingredientKeys }){
                     <div className="details">
                         <img id="details-img" src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
                         <p id="details-attribution">{formatAttribution}</p>
+                        {!deleted ? <Button variant='dark' onClick={handleDeletedCocktail} value="Delete">Delete Cocktail</Button> : <sub id="delete-message">&nbsp;&nbsp;&nbsp;&nbsp;Cocktail Deleted</sub>}
                     </div>
                 </Col>
                 <Col className='col-details'>
