@@ -1,7 +1,7 @@
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 
-import CocktailCard from './CocktailCard'
+import CocktailCard from './Card'
 
 function CocktailList({ cocktails, onCocktailDelete }) {
     return(

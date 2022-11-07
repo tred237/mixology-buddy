@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import CocktailIngredientsList from "./CocktailIngredientsList";
+import CocktailIngredientsList from "./IngredientsList";
 import { Button } from 'react-bootstrap'
 
 function CocktailDetails({ ingredientKeys, onCocktailDelete }){

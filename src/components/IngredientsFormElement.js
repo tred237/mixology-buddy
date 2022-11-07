@@ -1,6 +1,6 @@
-import Form from 'react-bootstrap/Form';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import Form from 'react-bootstrap/Form'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 
 function Ingredients({ ingredient, formData, handleChange }) {
     const splitIngredient = ingredient.split('strIngredient')[1]

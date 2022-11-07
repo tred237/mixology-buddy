@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 
 import HighLevelFormElements from './HighLevelFormElements'
-import IngredientsFormElement from './IngredientsFormElement';
+import IngredientsFormElement from './IngredientsFormElement'
 
 function NewCocktailForm({ ingredients, onCocktailSubmit }){
     const formDataDefault = {
@@ -68,8 +68,6 @@ function NewCocktailForm({ ingredients, onCocktailSubmit }){
     }
 
     return(
-        <>
-        {/* <h5>Add your favorite cocktail!</h5> */}
         <Form className="form" onSubmit={handleSubmitClick} >
             <h5 className="mb-4">Add your favorite cocktail!</h5>
             <Form.Group className="mb-4">
@@ -81,7 +79,6 @@ function NewCocktailForm({ ingredients, onCocktailSubmit }){
                 <Button variant="dark" type="submit">Submit</Button>
             </Form.Group>
         </Form>
-        </>
     )
 }
 
