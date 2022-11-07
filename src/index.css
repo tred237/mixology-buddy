@@ -2,12 +2,14 @@
   background-color: black;
   color: white;
   margin-top: 3%;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-#card-list-container {
+.form, #card-list-container {
   margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .card {
@@ -18,6 +20,7 @@
   margin: 3%;
   margin-top: 12px;
   margin-bottom: 12px;
+  width: 85%;
 }
 
 .card-img-top {
@@ -28,6 +31,6 @@
   width: 50%
 }
 
-.form {
-  margin-top: 5%;
+#nav-brand {
+  font-size: x-large
 }

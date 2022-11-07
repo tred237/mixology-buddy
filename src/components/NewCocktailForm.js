@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 
@@ -71,17 +69,18 @@ function NewCocktailForm({ ingredients, onCocktailSubmit }){
 
     return(
         <>
-        <h5>Add your favorite cocktail!</h5>
-            <Form className="form" onSubmit={handleSubmitClick} >
-                <Form.Group className="mb-4">
-                    <Button variant="dark" type="submit">Submit</Button>
-                </Form.Group>
-                <HighLevelFormElements formData={formData} handleChange={handleChange} />
-                {ingredients.map(ingredient => <IngredientsFormElement key={ingredient} ingredient={ingredient} formData={formData} handleChange={handleChange}/>)}
-                <Form.Group className="mb-4">
-                    <Button variant="dark" type="submit">Submit</Button>
-                </Form.Group>
-            </Form>
+        {/* <h5>Add your favorite cocktail!</h5> */}
+        <Form className="form" onSubmit={handleSubmitClick} >
+            <h5 className="mb-4">Add your favorite cocktail!</h5>
+            <Form.Group className="mb-4">
+                <Button variant="dark" type="submit">Submit</Button>
+            </Form.Group>
+            <HighLevelFormElements formData={formData} handleChange={handleChange} />
+            {ingredients.map(ingredient => <IngredientsFormElement key={ingredient} ingredient={ingredient} formData={formData} handleChange={handleChange}/>)}
+            <Form.Group className="mb-4">
+                <Button variant="dark" type="submit">Submit</Button>
+            </Form.Group>
+        </Form>
         </>
     )
 }

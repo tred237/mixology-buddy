@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div>
-      <h1>Mixology Buddy</h1>
+      {/* <h1>Mixology Buddy</h1> */}
       <NavBar />
       <Switch>
         <Route path="/add-a-cocktail">
