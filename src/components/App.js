@@ -21,10 +21,25 @@ function App() {
     })
   },[])
 
-  function handleCocktailDelete(id){
-    const newCocktailList = cocktailData.filter(element => element.id !== id)
-    setCocktailData(newCocktailList)
+  function handleDeleteClick(cocktail){
+    fetch(`http://localhost:3000/cocktails/${cocktail.id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(cocktail)
+    })
+    .then(res => res.json())
+    .then(() => {
+      const newCocktailList = cocktailData.filter(element => element.id !== cocktail.id)
+      setCocktailData(newCocktailList)
+    })
   }
+
+  // function handleCocktailDelete(id){
+  //   const newCocktailList = cocktailData.filter(element => element.id !== id)
+  //   setCocktailData(newCocktailList)
+  // }
 
   function handleCocktailSubmit(cocktail){
     setCocktailData([...cocktailData, cocktail])
@@ -42,7 +57,7 @@ function App() {
           <CocktailDetails ingredientKeys={ingredients} />
         </Route>
         <Route path="/">
-          <CocktailList cocktails={cocktailData} onCocktailDelete={handleCocktailDelete}/>
+          <CocktailList cocktails={cocktailData} onCocktailDelete={handleDeleteClick}/>
         </Route>
       </Switch>
     </div>
