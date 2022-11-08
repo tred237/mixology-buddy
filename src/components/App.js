@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
 
+import Login from './LoginForm'
 import CocktailList from './CocktailList'
 import NavBar from './NavBar'
 import NewCocktailForm from './NewCocktailForm'
@@ -9,6 +10,7 @@ import CocktailDetails from './CocktailDetails'
 function App() {
   const [cocktailData, setCocktailData] = useState([])
   const [ingredients, setIngredients] = useState([])
+  const [loggedIn, setLoggedIn] = useState(false)
 
   useEffect(() => {
     fetch('http://localhost:3000/cocktails')
@@ -36,28 +38,32 @@ function App() {
     })
   }
 
-  // function handleCocktailDelete(id){
-  //   const newCocktailList = cocktailData.filter(element => element.id !== id)
-  //   setCocktailData(newCocktailList)
-  // }
-
   function handleCocktailSubmit(cocktail){
     setCocktailData([...cocktailData, cocktail])
   }
 
+  // function handleLogin(){
+  //   setLoggedIn(true)
+  // }
+
+
+  console.log(loggedIn)
+
   return (
     <div>
-      {/* <h1>Mixology Buddy</h1> */}
-      <NavBar />
+      <NavBar loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
       <Switch>
-        <Route path="/add-a-cocktail">
-          <NewCocktailForm cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
+        <Route exact path="/add-a-cocktail">
+          <NewCocktailForm loggedIn={loggedIn} cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
         </Route>
-        <Route path="/details/:drinkId">
+        <Route exact path="/details/:drinkId">
           <CocktailDetails ingredientKeys={ingredients} onCocktailDelete={handleDeleteClick} />
         </Route>
-        <Route path="/">
-          <CocktailList cocktails={cocktailData} onCocktailDelete={handleDeleteClick}/>
+        <Route exact path="/login">
+          <Login setLoggedIn={setLoggedIn}/>
+        </Route>
+        <Route exact path="/">
+          <CocktailList cocktails={cocktailData} loggedIn={loggedIn} onCocktailDelete={handleDeleteClick}/>
         </Route>
       </Switch>
     </div>

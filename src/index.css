@@ -50,3 +50,27 @@
   color:red;
   font-style: italic;
 }
+
+#nav-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2%;
+  margin-right: 5%;
+}
+
+.nav-button {
+  padding: 20px 5px;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+}
+
+.nav-button:active, .nav-button:hover {
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* #logout-button {
+  padding: 6px;
+} */

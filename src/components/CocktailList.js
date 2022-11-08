@@ -1,9 +1,12 @@
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
+import { Redirect } from 'react-router-dom'
 
 import CocktailCard from './Card'
 
-function CocktailList({ cocktails, onCocktailDelete }) {
+function CocktailList({ cocktails, loggedIn, onCocktailDelete }) {
+    if(loggedIn === false) return <Redirect to='/login' />
+
     return(
         <div id='card-list-container'>
             <h5>Cocktail List</h5>
