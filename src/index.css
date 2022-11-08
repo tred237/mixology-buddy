@@ -71,6 +71,11 @@
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* #logout-button {
-  padding: 6px;
-} */
+#login-form {
+  margin-left: 30%;
+  margin-right: 30%
+}
+
+#logout-title {
+  text-align: center;
+}

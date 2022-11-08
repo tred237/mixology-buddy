@@ -42,13 +42,6 @@ function App() {
     setCocktailData([...cocktailData, cocktail])
   }
 
-  // function handleLogin(){
-  //   setLoggedIn(true)
-  // }
-
-
-  console.log(loggedIn)
-
   return (
     <div>
       <NavBar loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>

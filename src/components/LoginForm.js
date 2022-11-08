@@ -22,7 +22,7 @@ function Login({ setLoggedIn }){
     }
 
     return(
-        <Form className="form" onSubmit={handleSubmit}>
+        <Form className="form" id="login-form" onSubmit={handleSubmit}>
             <Form.Group className="mb-4">
                 <Form.Label>Username</Form.Label>
                 <Form.Control required type="text" placeholder="Enter username" name="username" value={loginFormData.username} onChange={handleChange} />
