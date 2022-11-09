@@ -1,6 +1,6 @@
 # Mixology Buddy
 
-This React app lets the use catalog their favorite cocktails.
+This React app lets the user catalog their favorite cocktails. This code is not meant to be monetizable or for commercial use.
 
 ## Installation
 
@@ -34,94 +34,36 @@ This React app lets the use catalog their favorite cocktails.
 	<br>
 	<img width="352" alt="image" src="https://user-images.githubusercontent.com/103388556/200953293-64f7d6ed-c1ad-479b-8639-a828afd90ccc.png">
 	
-3. If you successfully launched the app, a new window with the front-end should be created and you should see the log in page.
+3. If you successfully launched the app, a new window with the front-end should be created and you should see the login page.
 
 	<img width="1433" alt="image" src="https://user-images.githubusercontent.com/103388556/200953968-578c800d-47a6-441e-ada4-f3039c53dac2.png">
 
 4. The user should be able to log in with any credentials and have the cocktail list rendered for them upon login.
 
-	<img width="1438" alt="image" src="https://user-images.githubusercontent.com/103388556/200954559-02585c6f-9e89-4c50-ab98-61e1106dcbfa.png">
-
-
+	<img width="1432" alt="image" src="https://user-images.githubusercontent.com/103388556/200959663-08e6f422-2c0d-4839-a00d-654d407e3b28.png">
 	
+5. The user can add their own favorite cocktails to the list from the Add A Cocktail tab. Once the user submits, their newly created cocktail will be added to the JSON server and should appear on the Home page in the cocktail list.
+
+	<img width="1431" alt="image" src="https://user-images.githubusercontent.com/103388556/200959254-7e8c33e0-5eb5-4f8b-9684-ec2b979fe447.png">
+
+6. The user can view the details of how to make a particular cocktail by clicking on the "Details" button on any of the cards.
+
+	<img width="1425" alt="image" src="https://user-images.githubusercontent.com/103388556/200960148-f96a5a4b-da8a-47b8-9de4-0c460862b87e.png">
+
+7. The user can delete cocktails from the JSON server and front-end by either clicking the "Delete Cocktail" button in cocktail's details or by clicking the "Delete" button on a card in the cocktails list.
+
+	<img width="537" alt="image" src="https://user-images.githubusercontent.com/103388556/200960489-66e1b5c8-24b2-4202-a96e-2b6d4a62a130.png">
 	
+	<img width="182" alt="image" src="https://user-images.githubusercontent.com/103388556/200960548-4c8babde-5783-4da0-94bc-325c6683f965.png">
 	
+8. The "Log Out" button at the top right of the screen will send the user back to the Login page.
 
-
-
-
+	<img width="485" alt="image" src="https://user-images.githubusercontent.com/103388556/200960733-89b8a5f0-06eb-4fe3-bcd9-8c3e2fae038c.png">
 
 # Contributing
 
 Contributions are welcome, but please open an issue first to discuss what you would like to change. If you fork the repository, please rememeber that this code is not meant to be monetizable or for commercial use.
 
-# Getting Started with Create React App
+# License/API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All of the data was pulled from the [TheCocktailDB API](https://www.thecocktaildb.com/api.php?ref=apilist.fun)
