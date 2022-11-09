@@ -5,22 +5,24 @@ This React app lets the user catalog their favorite cocktails. This code is not 
 ## Installation
 
 1. To access the functionality of this app, you will need to fork and clone the back end repositiory from [here](https://github.com/tred237/json-server-template). (The instructions to get this working is located in the README)
+
 2. After setting up the back-end, you need to Fork and Clone this repository
    
-  ![image](https://user-images.githubusercontent.com/103388556/189546584-8ec5fef7-4d7d-4c47-ae6b-f6e6ae834a69.png)
+  	![image](https://user-images.githubusercontent.com/103388556/189546584-8ec5fef7-4d7d-4c47-ae6b-f6e6ae834a69.png)
   
-  ![image](https://user-images.githubusercontent.com/103388556/189546761-f0f05411-1967-46c7-b081-063bc6951ae0.png)
+	![image](https://user-images.githubusercontent.com/103388556/189546761-f0f05411-1967-46c7-b081-063bc6951ae0.png)
 
-2. Copy the SSH key from the forked repository.
+3. Copy the SSH key from the forked repository.
 
 	![image](https://user-images.githubusercontent.com/103388556/189546817-4d32dcbb-e79e-4220-8fc2-c573d21e9cc1.png)
   
-3. In your terminal, create a new directory, navigate to it, and clone the repository using the SSH key you copied from the fork.
+4. In your terminal, create a new directory, navigate to it, and clone the repository using the SSH key you copied from the fork.
 	```
 	mkdir mixology-buddy-folder
 	cd mixology-buddy-folder
 	git clone <pasted-ssh-key>
 	```
+5. In that same directory, install your dependancies using `npm install`
 	
 ## Usage
 
