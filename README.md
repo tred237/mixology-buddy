@@ -4,7 +4,7 @@ This React app lets the use catalog their favorite cocktails.
 
 ## Installation
 
-1. To access the functionality of this app, you will need to Fork and Clone the back end repositiory from [here](https://github.com/tred237/json-server-template). (The instructions to get this working is located in the README)
+1. To access the functionality of this app, you will need to fork and clone the back end repositiory from [here](https://github.com/tred237/json-server-template). (The instructions to get this working is located in the README)
 2. After setting up the back-end, you need to Fork and Clone this repository
    
   ![image](https://user-images.githubusercontent.com/103388556/189546584-8ec5fef7-4d7d-4c47-ae6b-f6e6ae834a69.png)
@@ -21,6 +21,35 @@ This React app lets the use catalog their favorite cocktails.
 	cd mixology-buddy-folder
 	git clone <pasted-ssh-key>
 	```
+	
+## Usage
+
+1. In your terminal, navigate to the folder where you cloned the back-end repository and run `npm run dev` to start your json-server. The output should confirm that the server has started and will provide you with the localhost URL and port that the sever is running on:
+
+	<img width="339" alt="image" src="https://user-images.githubusercontent.com/103388556/200951311-2c200060-8e2c-403e-a308-e30327445f8f.png">
+	
+2. In another terminal window, navigate to the folder where you cloned the front end rep and run `npm start` to start the front-end. You may be asked if you want to run the app on a different port. If so, enter `y`.
+
+	<img width="452" alt="image" src="https://user-images.githubusercontent.com/103388556/200952535-9497418b-0074-45aa-815b-e180bf663bd7.png">
+	<br>
+	<img width="352" alt="image" src="https://user-images.githubusercontent.com/103388556/200953293-64f7d6ed-c1ad-479b-8639-a828afd90ccc.png">
+	
+3. If you successfully launched the app, a new window with the front-end should be created and you should see the log in page.
+
+	<img width="1433" alt="image" src="https://user-images.githubusercontent.com/103388556/200953968-578c800d-47a6-441e-ada4-f3039c53dac2.png">
+
+4. The user should be able to log in with any credentials and have the cocktail list rendered for them upon login.
+
+	<img width="1438" alt="image" src="https://user-images.githubusercontent.com/103388556/200954559-02585c6f-9e89-4c50-ab98-61e1106dcbfa.png">
+
+
+	
+	
+	
+
+
+
+
 
 # Contributing
 
