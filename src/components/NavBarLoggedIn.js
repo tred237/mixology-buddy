@@ -19,7 +19,7 @@ function NavBarButtons({ setLoggedIn }) {
                 <NavLink className="nav-button" to="/add-a-cocktail" >
                     Add A Cocktail
                 </NavLink>
-                <Button id="logout-button" variant="dark" onClick={handleLogout}>Log Out</Button>
+                <Button variant="dark" onClick={handleLogout}>Log Out</Button>
             </div>
         </div>
     )
