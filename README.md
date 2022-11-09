@@ -62,10 +62,10 @@ This React app lets the user catalog their favorite cocktails. This code is not 
 
 	<img width="485" alt="image" src="https://user-images.githubusercontent.com/103388556/200960733-89b8a5f0-06eb-4fe3-bcd9-8c3e2fae038c.png">
 
-# Contributing
+## Contributing
 
 Contributions are welcome, but please open an issue first to discuss what you would like to change. If you fork the repository, please rememeber that this code is not meant to be monetizable or for commercial use.
 
-# License/API
+## License/API
 
 All of the data was pulled from the [TheCocktailDB API](https://www.thecocktaildb.com/api.php?ref=apilist.fun)
