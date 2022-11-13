@@ -46,14 +46,14 @@ function App() {
     <div>
       <NavBar loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
       <Switch>
+        <Route exact path="/login">
+          <Login setLoggedIn={setLoggedIn}/>
+        </Route>
         <Route exact path="/add-a-cocktail">
           <NewCocktailForm loggedIn={loggedIn} cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
         </Route>
-        <Route exact path="/details/:drinkId">
+        <Route exact path="/:drinkId">
           <CocktailDetails ingredientKeys={ingredients} onCocktailDelete={handleDeleteClick} />
-        </Route>
-        <Route exact path="/login">
-          <Login setLoggedIn={setLoggedIn}/>
         </Route>
         <Route exact path="/">
           <CocktailList cocktails={cocktailData} loggedIn={loggedIn} onCocktailDelete={handleDeleteClick}/>
