@@ -1,17 +1,14 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import CocktailIngredientsList from "./IngredientsList";
 import DetailsLeft from './DetailsLeft';
-// import { Button } from 'react-bootstrap'
+import DetailsRight from './DetailsRight';
 
 function CocktailDetails({ ingredientKeys, onCocktailDelete }){
     const [cocktail, setCocktail] = useState([])
     const [attribution, setAttribution] = useState([])
-
     const {drinkId} = useParams()
 
     useEffect(() => {
@@ -23,38 +20,14 @@ function CocktailDetails({ ingredientKeys, onCocktailDelete }){
         })
     },[drinkId])
 
-    // const formatAttribution = attribution.join(", ")
-
-    // function handleDeletedCocktail(){
-    //     onCocktailDelete(cocktail)
-    //     setDeleted(!deleted)
-    // }
-
     return(
         <div id="cocktail-details-container">
             <Row md={2}>
                 <Col className='col-details'>
                     <DetailsLeft cocktail={cocktail} attribution={attribution} onCocktailDelete={onCocktailDelete} />
-                    {/* <div className="details">
-                        <img id="details-img" src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
-                        <p id="details-attribution">{formatAttribution}</p>
-                        {!deleted ? <Button variant='dark' onClick={handleDeletedCocktail} value="Delete">Delete Cocktail</Button> : <sub id="delete-message">&nbsp;&nbsp;&nbsp;&nbsp;Cocktail Deleted</sub>}
-                    </div> */}
-
                 </Col>
                 <Col className='col-details'>
-                    <div className="details">
-                        <h4>{cocktail.strDrink}</h4>
-                        <p>{cocktail.strInstructions}</p>
-                        <ul>
-                            {ingredientKeys.map(ingredientKey => {
-                                if(cocktail[ingredientKey]) return <CocktailIngredientsList key={ingredientKey} 
-                                                                                            ingredient={cocktail[ingredientKey]} 
-                                                                                            measurement={cocktail[`strMeasure${ingredientKey.split('strIngredient')[1]}`]} />
-                                return true
-                            })}
-                        </ul>
-                    </div>
+                    <DetailsRight cocktail={cocktail} ingredientKeys={ingredientKeys} />
                 </Col>
             </Row>
         </div>
