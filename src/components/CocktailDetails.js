@@ -5,12 +5,13 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 import CocktailIngredientsList from "./IngredientsList";
-import { Button } from 'react-bootstrap'
+import DetailsLeft from './DetailsLeft';
+// import { Button } from 'react-bootstrap'
 
 function CocktailDetails({ ingredientKeys, onCocktailDelete }){
     const [cocktail, setCocktail] = useState([])
     const [attribution, setAttribution] = useState([])
-    const [deleted, setDeleted] = useState(false)
+
     const {drinkId} = useParams()
 
     useEffect(() => {
@@ -22,22 +23,24 @@ function CocktailDetails({ ingredientKeys, onCocktailDelete }){
         })
     },[drinkId])
 
-    const formatAttribution = attribution.join(", ")
+    // const formatAttribution = attribution.join(", ")
 
-    function handleDeletedCocktail(){
-        onCocktailDelete(cocktail)
-        setDeleted(!deleted)
-    }
+    // function handleDeletedCocktail(){
+    //     onCocktailDelete(cocktail)
+    //     setDeleted(!deleted)
+    // }
 
     return(
         <div id="cocktail-details-container">
             <Row md={2}>
                 <Col className='col-details'>
-                    <div className="details">
+                    <DetailsLeft cocktail={cocktail} attribution={attribution} onCocktailDelete={onCocktailDelete} />
+                    {/* <div className="details">
                         <img id="details-img" src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
                         <p id="details-attribution">{formatAttribution}</p>
                         {!deleted ? <Button variant='dark' onClick={handleDeletedCocktail} value="Delete">Delete Cocktail</Button> : <sub id="delete-message">&nbsp;&nbsp;&nbsp;&nbsp;Cocktail Deleted</sub>}
-                    </div>
+                    </div> */}
+
                 </Col>
                 <Col className='col-details'>
                     <div className="details">
