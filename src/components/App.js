@@ -50,7 +50,7 @@ function App() {
           <Login setLoggedIn={setLoggedIn}/>
         </Route>
         <Route exact path="/add-a-cocktail">
-          <NewCocktailForm loggedIn={loggedIn} cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
+          <NewCocktailForm cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
         </Route>
         <Route exact path="/:drinkId">
           <CocktailDetails ingredientKeys={ingredients} onCocktailDelete={handleDeleteClick} />
