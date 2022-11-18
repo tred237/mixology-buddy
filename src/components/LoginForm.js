@@ -24,11 +24,11 @@ function Login({ setLoggedIn }){
     return(
         <Form className="form" id="login-form" onSubmit={handleSubmit}>
             <Form.Group className="mb-4">
-                <Form.Label>Username</Form.Label>
+                <Form.Label>Username *</Form.Label>
                 <Form.Control required type="text" placeholder="Enter username" name="username" value={loginFormData.username} onChange={handleChange} />
             </Form.Group>  
             <Form.Group className="mb-4">
-                <Form.Label>Password</Form.Label>
+                <Form.Label>Password *</Form.Label>
                 <Form.Control required type="password" placeholder="Enter password" name="password" value={loginFormData.password} onChange={handleChange} />
             </Form.Group>
             <Form.Group className="mb-4">
