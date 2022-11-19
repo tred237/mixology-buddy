@@ -35,11 +35,7 @@ function App() {
     .then(() => {
       const newCocktailList = cocktailData.filter(element => element.id !== cocktail.id)
       setCocktailData(filterCockails(cocktailData, cocktail))
-
-      if(popularCocktails){
-        const updatedPopularCocktails = popularCocktails.filter(element => element.id !== cocktail.id)
-        setPopularCocktails(updatedPopularCocktails)
-      }
+      if(popularCocktails) setPopularCocktails(filterCockails(popularCocktails, cocktail))
     })
   }
 
