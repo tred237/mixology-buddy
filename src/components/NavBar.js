@@ -8,12 +8,12 @@ function NavBar(){
             <div id="nav-buttons">
                 <NavLink className="nav-button" to="/" >
                     Home
-                </NavLink> 
-                <NavLink className="nav-button" to="/add-a-cocktail" >
-                    Add A Cocktail
                 </NavLink>
                 <NavLink className="nav-button" to="/popular-cocktails">
                     Popular Cocktails
+                </NavLink>
+                <NavLink className="nav-button" to="/add-a-cocktail" >
+                    Add A Cocktail
                 </NavLink>
             </div>
         </div>

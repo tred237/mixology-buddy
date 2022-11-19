@@ -67,7 +67,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/popular-cocktails">
-          <CocktailList  cocktails={popularCocktails} isPopular={true} onCocktailDelete={handleDeleteClick} />
+          <CocktailList  cocktails={popularCocktails} isPopular={true} />
         </Route>
         <Route exact path="/add-a-cocktail">
           <NewCocktailForm cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
