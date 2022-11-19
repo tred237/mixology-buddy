@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col'
 import DetailsLeft from './DetailsLeft';
 import DetailsRight from './DetailsRight';
 
-function CocktailDetails({ ingredientKeys, onCocktailDelete }){
+function CocktailDetails({ ingredientKeys, onCocktailDelete, onLikeCocktails }){
     const [cocktail, setCocktail] = useState([])
     const [attribution, setAttribution] = useState([])
     const {drinkId} = useParams()
@@ -20,11 +20,16 @@ function CocktailDetails({ ingredientKeys, onCocktailDelete }){
         })
     },[drinkId])
 
+
+    function handleLikeDetails(likes){
+        setCocktail({...cocktail, strLikes:likes})
+    }
+
     return(
         <div id="cocktail-details-container">
             <Row md={2}>
                 <Col className='col-details'>
-                    <DetailsLeft cocktail={cocktail} attribution={attribution} onCocktailDelete={onCocktailDelete} />
+                    <DetailsLeft cocktail={cocktail} attribution={attribution} onCocktailDelete={onCocktailDelete} onLikeCocktails={onLikeCocktails} onLikeDetails={handleLikeDetails} />
                 </Col>
                 <Col className='col-details'>
                     <DetailsRight cocktail={cocktail} ingredientKeys={ingredientKeys} />

@@ -10,6 +10,7 @@ function NewCocktailForm({ ingredients, onCocktailSubmit }){
         strDrink: '',
         strDrinkThumb: '',
         strInstructions: '',
+        strLikes: 0,
         strIngredient1: '',
         strIngredient2: '',
         strIngredient3: '',

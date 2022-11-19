@@ -40,6 +40,15 @@ function App() {
     setCocktailData([...cocktailData, cocktail])
   }
 
+  function handleLikeCocktails(cocktail){
+    const updatedCocktails = cocktailData.map(element => {
+      if(element.id === cocktail.id) element.strLikes = cocktail.strLikes
+      return element
+    })
+
+    setCocktailData(updatedCocktails)
+  }
+
   return (
     <div>
       <NavBar />
@@ -51,7 +60,7 @@ function App() {
           <NewCocktailForm cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
         </Route>
         <Route exact path="/:drinkId">
-          <CocktailDetails ingredientKeys={ingredients} onCocktailDelete={handleDeleteClick} />
+          <CocktailDetails ingredientKeys={ingredients} onCocktailDelete={handleDeleteClick} onLikeCocktails={handleLikeCocktails} />
         </Route>
         <Route exact path="/">
           <CocktailList cocktails={cocktailData} isPopular={false} onCocktailDelete={handleDeleteClick}/>

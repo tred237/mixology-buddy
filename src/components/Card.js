@@ -12,7 +12,9 @@ function CocktailCard({ cocktail, onCocktailDelete }){
             <Card.Img variant="top" src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
             <Card.Body>
                 <Card.Text>{cocktail.strDrink}</Card.Text>
-                <Button variant='dark' onClick={() => history.push(`/${cocktail.id}`)}>Details</Button> <Button variant='dark' onClick={() => onCocktailDelete(cocktail)} value="Delete">Delete</Button>
+                <Button variant='dark' onClick={() => history.push(`/${cocktail.id}`)}>Details</Button>
+                {' '}
+                <Button variant='dark' onClick={() => onCocktailDelete(cocktail)} value="Delete">Delete</Button>
             </Card.Body>
         </Card>
     )
