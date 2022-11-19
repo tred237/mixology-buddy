@@ -8,7 +8,7 @@ import CocktailDetails from './CocktailDetails'
 
 function App() {
   const [cocktailData, setCocktailData] = useState([])
-  // const [popularCocktails, setPopularCocktails] = useState([])
+  const [popularCocktails, setPopularCocktails] = useState([])
   const [ingredients, setIngredients] = useState([])
 
   useEffect(() => {
@@ -16,7 +16,9 @@ function App() {
     .then(res => res.json())
     .then(data => {
       const ingredientKeys = Object.keys(data[0]).filter(key => key.includes('strIngredient'))
+
       setCocktailData(data)
+      updatePopularCocktails(data)
       setIngredients(ingredientKeys)
     })
   },[])
@@ -32,7 +34,12 @@ function App() {
     .then(res => res.json())
     .then(() => {
       const newCocktailList = cocktailData.filter(element => element.id !== cocktail.id)
-      setCocktailData(newCocktailList)
+      setCocktailData(filterCockails(cocktailData, cocktail))
+
+      if(popularCocktails){
+        const updatedPopularCocktails = popularCocktails.filter(element => element.id !== cocktail.id)
+        setPopularCocktails(updatedPopularCocktails)
+      }
     })
   }
 
@@ -46,7 +53,17 @@ function App() {
       return element
     })
 
+    updatePopularCocktails(updatedCocktails)
     setCocktailData(updatedCocktails)
+  }
+
+  function updatePopularCocktails(cocktails){
+    const newPopularCocktails = cocktails.filter(element => element.strLikes > 4)
+    setPopularCocktails(newPopularCocktails)
+  }
+
+  function filterCockails(cocktails, cocktail){
+    return cocktails.filter(element => element.id !== cocktail.id)
   }
 
   return (
@@ -54,7 +71,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/popular-cocktails">
-          <CocktailList  cocktails={cocktailData} isPopular={true} onCocktailDelete={handleDeleteClick} />
+          <CocktailList  cocktails={popularCocktails} isPopular={true} onCocktailDelete={handleDeleteClick} />
         </Route>
         <Route exact path="/add-a-cocktail">
           <NewCocktailForm cocktails={cocktailData} ingredients={ingredients} onCocktailSubmit={handleCocktailSubmit} />
