@@ -16,7 +16,6 @@ function DetailsLeft ({ cocktail, attribution, onCocktailDelete, onLikeCocktails
         })
         .then(res => res.json())
         .then(data => {
-            // console.log(data)
             onLikeCocktails(data)
             onLikeDetails(data.strLikes)
         })
