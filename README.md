@@ -39,31 +39,31 @@ npm start
 
 <img width="352" alt="image" src="https://user-images.githubusercontent.com/103388556/200953293-64f7d6ed-c1ad-479b-8639-a828afd90ccc.png">
 	
-3. If you successfully launched the app, a new window with the front-end should be created and you should see the login page.
+3. If you successfully launched the app, a new window with the front-end should be created and you should see the app's home page.
 
-<img width="1433" alt="image" src="https://user-images.githubusercontent.com/103388556/200953968-578c800d-47a6-441e-ada4-f3039c53dac2.png">
-
-4. The user should be able to log in with any credentials and have the cocktail list rendered for them upon login.
-
-<img width="1432" alt="image" src="https://user-images.githubusercontent.com/103388556/200959663-08e6f422-2c0d-4839-a00d-654d407e3b28.png">
+<img width="1431" alt="image" src="https://user-images.githubusercontent.com/103388556/202944126-3b65d5df-9775-4c19-a89d-dd60326fa8d7.png">
 	
-5. The user can add their own favorite cocktails to the list from the Add A Cocktail tab. Once the user submits, their newly created cocktail will be added to the JSON server and should appear on the Home page in the cocktail list.
+4. The user can add their favorite cocktails to the list from the Add A Cocktail tab. Once the user submits, their newly created cocktail will be added to the JSON server and should appear on the Home page in the cocktail list.
 
 <img width="1431" alt="image" src="https://user-images.githubusercontent.com/103388556/200959254-7e8c33e0-5eb5-4f8b-9684-ec2b979fe447.png">
 
-6. The user can view the details of how to make a particular cocktail by clicking on the "Details" button on any of the cards.
+<img width="1434" alt="image" src="https://user-images.githubusercontent.com/103388556/202944357-45e5f632-27d8-4f3e-a7ce-d5afacb7540b.png">
 
-<img width="1425" alt="image" src="https://user-images.githubusercontent.com/103388556/200960148-f96a5a4b-da8a-47b8-9de4-0c460862b87e.png">
+5. The user can view the details of how to make a particular cocktail by clicking on the "Details" button on any of the cards.
 
-7. The user can delete cocktails from the JSON server and front-end by either clicking the "Delete Cocktail" button in cocktail's details or by clicking the "Delete" button on a card in the cocktails list.
+<img width="1428" alt="image" src="https://user-images.githubusercontent.com/103388556/202944437-7143114b-307f-4c15-9e5d-121278344e98.png">
 
-<img width="537" alt="image" src="https://user-images.githubusercontent.com/103388556/200960489-66e1b5c8-24b2-4202-a96e-2b6d4a62a130.png">
+6. The user can delete cocktails from the JSON server and front-end by either clicking the "Delete Cocktail" button in cocktail's details or by clicking the "Delete" button on a card in the cocktails list. If a user deletes the cocktail from the cocktail's details page, they will be routed back to the home page.
+
+<img width="334" alt="image" src="https://user-images.githubusercontent.com/103388556/202944584-26ff98e2-bda7-4074-bc25-b6ecad89e8f0.png">
 	
-<img width="182" alt="image" src="https://user-images.githubusercontent.com/103388556/200960548-4c8babde-5783-4da0-94bc-325c6683f965.png">
+<img width="277" alt="image" src="https://user-images.githubusercontent.com/103388556/202944649-d1f93a10-afc5-4d98-a83a-d92e012f3087.png">
 	
-8. The "Log Out" button at the top right of the screen will send the user back to the Login page.
+7. In each cocktail's details page, there is a Like button. If a cocktail receives more than 5 likes, that cocktail will be added to the Popular Cocktails page. If user deletes a cocktail and it is shown on Popular Cocktails page, it will be moved from both the Home and Popular Cocktails page.
 
-<img width="485" alt="image" src="https://user-images.githubusercontent.com/103388556/200960733-89b8a5f0-06eb-4fe3-bcd9-8c3e2fae038c.png">
+<img width="392" alt="image" src="https://user-images.githubusercontent.com/103388556/202944991-025e9114-1450-42eb-a8c3-1756a76e8b21.png">
+
+<img width="1430" alt="image" src="https://user-images.githubusercontent.com/103388556/202945013-e7b1304b-6a89-48d9-8821-fb17074ee162.png">
 
 ## Contributing
 
